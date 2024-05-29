@@ -6,13 +6,11 @@
 
 body {
     margin: 0 auto;
-    padding: 0;
     font-family: 'Inter';
 }
 
 nav {
-    margin: 0;
-    padding: 0;   
+    height: 100%;
 }
 
 a {
@@ -26,11 +24,14 @@ a {
     align-items: center;
     background-color: gray;
     padding: 0;
+
 }
 
 .select_bar_logo {
     font-size: 24px;
+    justify-content: center;
     color: var(--text-color);
+    padding-left: 20px;
 }
 
 .select_bar_logo i {
@@ -73,34 +74,41 @@ a {
 
 @media screen and (max-width: 768px) {
     .select_bar {
-        flex-direction: column;
-        align-items: flex-start;
+        position: relative;
+        display: block;
+        text-align: center;
     }
-
+    .select_bar_logo { 
+        position: absolute;
+        top: 30%;
+    }
     .select_bar_menu {
-        width: 100%;
         display: none;
+        width: 100vw;
+        padding-top:66px;
         flex-direction: column;
         align-items: center;
+        background-color: rgba(128, 128, 128, 0.68);
     }
 
     .select_bar_menu li {
-        width: 100%;
+        display: inline;
         text-align: center;
     }
 
     .select_bar_user {
-        width: 100%;
-        display: none;
-        justify-content: center;
+        display: block;
+        position: absolute;
+        right: 10px; top: 25%;
     }
 
     .select_bar_btn {
         display: block;
+        position: absolute;
+        right: 60px; top: 30%;
     }
 
-    .select_bar_menu.active,
-    .select_bar_user.active {
+    .select_bar_menu.active{
         display: flex;
     }
 }

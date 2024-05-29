@@ -14,7 +14,8 @@
 
     <script src="https://kit.fontawesome.com/1c5675741f.js" crossorigin="anonymous"></script>
     <script src="../js/main.js" defer></script>
-
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+    <link href="../css/slide.css" rel="stylesheet">
 </head>
 
 <body>
@@ -40,15 +41,57 @@
         </nav>
     </header>
     <section>
-        <article class="intro">
-            <h2>뇌 기억력을 강화하는 방법을 배워보세요</h2>
-            <p>여기에는 일상 생활에서 쉽게 할 수 있는 기억력 강화 운동들을 소개합니다.</p>
+        <article class="main">
+            <div class="art_intro">
+                <br>
+                <h2>뇌 기억력을 강화하는 방법을 배워보세요</h2>
+                <p>여기에는 일상 생활에서 쉽게 할 수 있는 기억력 강화 운동들을 소개합니다.</p>
+                <div>
+                    <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+                        poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+                        <source src="MY_VIDEO.mp4" type="video/mp4" />
+                        <source src="MY_VIDEO.webm" type="video/webm" />
+                        <p class="vjs-no-js">
+                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                    </video>
+                    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+                </div>
+                <div>
+                    <div id="image_container">
+                        <h1>슬라이드</h1>
+                        <div class="album">
+                            <div class="images">
+                                <div class="image">1</div>
+                                <div class="image">2</div>
+                                <div class="image">3</div>
+                                <div class="image">4</div>
+                            </div>
+                        </div>
+                        <button class="prev">PREV</button>
+                        <button class="next">NEXT</button>
+                    </div>
+                    <script src="slide.js"></script>
+                </div>
+            </div>
         </article>
-        <article class="memory-game">
-            <h2>기억력 테스트 게임</h2>
-            <p>당신의 기억력을 시험해 보세요!</p>
-            <button id="startGame">게임 시작</button>
+        <article>
+            <div class="chart">
+                no
+            </div>
+            <div class="container">
+                <div class="left"></div>
+                <div class="memory-game">
+                    <h2>기억력 테스트 게임</h2>
+                    <p>당신의 기억력을 시험해 보세요!</p>
+                    <button id="startGame">게임 시작</button>
+                </div>
+                <aside>
+
+                </aside>
+            </div>
         </article>
+
         <article class="audio">
             <audio controls>
                 <source src="audio/relaxing.mp3" type="audio/mp3">
@@ -56,6 +99,7 @@
             </audio>
         </article>
     </section>
+
     <footer>
         <p>© 2024 BrainUp. 모든 권리 보유.</p>
     </footer>
