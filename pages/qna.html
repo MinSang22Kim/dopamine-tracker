@@ -13,9 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/1c5675741f.js" crossorigin="anonymous"></script>
     <script src="../js/qna.js" defer></script>
     <script src="../js/qna_data.js" defer></script>
+    <script src="https://kit.fontawesome.com/1c5675741f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -24,13 +25,13 @@
         <nav class="select_bar">
             <div class="select_bar_logo">
                 <i class="fa-solid fa-brain"></i>
-                <a href="../pages/index.html">brainUp</a>
+                <a href="../pages/index.html">Dopamine Tracker</a>
             </div>
             <ul class="select_bar_menu">
-                <li><a href="../pages/index.html">Home</a></li>
-                <li><a href="../pages/index.html" class="qna">Quiz</a></li>
-                <li><a href="#">Test2</a></li>
-                <li><a href="#">Test3</a></li>
+                <li><a href="../pages/index.html" class="home">Home</a></li>
+                <li><a href="../pages/qna.html" class="qna">Quiz</a></li>
+                <li><a href="../pages/detox.html" class="detox">Detox</a></li>
+                <li><a href="../pages/news.html" class="news">News</a></li>
             </ul>
             <ul class="select_bar_user">
                 <li><i class="fa-regular fa-circle-user"></i></li>
@@ -44,14 +45,49 @@
 
     <!-- QNA 섹션 -->
     <section class="qna-section">
-        <h2>숏폼 중독 자가 진단 퀴즈</h2>
+        <br>
+        <h1>도파민 중독 테스트</h1><br>
+        <!-- QNA 디폴트 -->
         <div>
-            <div class="wrapper">
-                <img src="../image/popcorn_brain.png" alt="popcorn_brain" class="popcorn_brain">
+            <div class="wrapper" id="initPage">
+                <img src="../image/popcorn_brain.png" alt="popcorn_brain" class="popcorn_brain"><br>
+                <h2>나도 과연 도파민 중독일까?</h2><br>
+                <button type="button" onclick="start()">시작하기</button>
             </div>
-            <h1>내 머리는 팝콘 브레인일까?</h1><br>
-            <button type="button" onclick="start()">시작하기</button>
-            <div class="status_bar"></div>
+            <!-- QNA 자가진단 -->
+            <div class="wrapper" id="quizes">
+                <div class="quiz_container">
+                    <div class="answer_container">
+                        <div class="answer_image">
+                            <img src="../image/yes.png" alt="yes" id="yesImage">
+                        </div>
+                        <div class="answer_image">
+                            <img src="../image/no.png" alt="no" id="noImage">
+                        </div>
+                    </div>
+                </div>
+                <div class="status_bar"></div>
+            </div>
+            <!-- QNA 결과화면 -->
+            <div class="wrapper" id="dopamine_result">
+                <h1>도파민 중독 자가진단 결과</h1><br>
+                <div class="wrapper" id="yes_small">
+                    <img src="../image/light_brain.jpeg" alt="light_brain" id="light_brain_image">
+                    <h4>나의 뇌는 쌩쌩해~~</h4>
+                </div>
+                <div class="wrapper" id="yes_middle">
+                    <img src="../image/normal_brain.png" alt="normal_brain" id="normal_brain_image">
+                    <h4>조금 과한 것 같아요. 주의하세요!!<br>도파민 디톡스로 예방주사 어떠신가요?</h4>
+                </div>
+                <div class="wrapper" id="yes_big">
+                    <img src="../image/skull_brain.jpeg" alt="skull_brain" id="skull_brain_image">
+                    <h4>도파민에 푹 빠진 당신, 뇌가 녹지는 않으셨나요..?<br>도파민 디톡스 어떠신가요?</h4>
+                </div>
+                <div class="link_box">
+                    <img src="../image/share.png" alt="share" id="shareImage" onclick="copyLink()">
+                    <button type="detoxBtn" onclick="goDetox()">잠깐 뇌를 위해 쉬어볼까요?</button>
+                </div>
+            </div>
         </div>
     </section>
 
