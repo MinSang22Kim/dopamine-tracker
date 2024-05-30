@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brainUp quiz page</title>
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/section.css">
+    <link rel="stylesheet" href="../css/qna.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/1c5675741f.js" crossorigin="anonymous"></script>
+    <script src="../js/qna.js" defer></script>
+    <script src="../js/qna_data.js" defer></script>
+</head>
+
+<body>
+    <!-- 상단바 -->
+    <header>
+        <nav class="select_bar">
+            <div class="select_bar_logo">
+                <i class="fa-solid fa-brain"></i>
+                <a href="../pages/index.html">brainUp</a>
+            </div>
+            <ul class="select_bar_menu">
+                <li><a href="../pages/index.html">Home</a></li>
+                <li><a href="../pages/index.html" class="qna">Quiz</a></li>
+                <li><a href="#">Test2</a></li>
+                <li><a href="#">Test3</a></li>
+            </ul>
+            <ul class="select_bar_user">
+                <li><i class="fa-regular fa-circle-user"></i></li>
+            </ul>
+
+            <a href="#" class="select_bar_btn">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+    <!-- QNA 섹션 -->
+    <section class="qna-section">
+        <h2>숏폼 중독 자가 진단 퀴즈</h2>
+        <div>
+            <div class="wrapper">
+                <img src="../image/popcorn_brain.png" alt="popcorn_brain" class="popcorn_brain">
+            </div>
+            <h1>내 머리는 팝콘 브레인일까?</h1><br>
+            <button type="button" onclick="start()">시작하기</button>
+            <div class="status_bar"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 BrainUp. 모든 권리 보유.</p>
+    </footer>
+</body>
+
+</html>
