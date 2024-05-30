@@ -1,5 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .qna-section {
     width: 100%;
+    height: 100vh;
     margin-top: 66px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -39,31 +45,131 @@ button:hover {
     font-weight: bold;
 }
 
+#quizes {
+    display: none;
+    width: 100%;
+    height: 500px;
+}
+
+/* 초기 팝콘브레인 이미지 */
 .popcorn_brain {
     width: 400px;
     height: 400px;
 }
 
-.wrapper {
+/* 퀴즈 관련 */
+.wrapper {  
     width: 100%;
-    height: 50%;
+    height: 100%;
+}
+
+.quiz_container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .answer_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
+    margin-top: 20px;
 }
 
 .answer_image {
-    width: 150px;
-    height: 200px;
+    width: 300px;
+    height: 400px;
     display: flex;
 }
 
 .answer_image img {
     width: 100%;
     height: 100%;
+}
+
+/* 상태바 */
+.status_bar {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 20px;
+    background-color: green;
+    width: 0%; /* 초기 상태 */
+    transition: width 0.4s ease-in-out;
+}
+
+/* 결과화면 */
+#dopamine_result {
+    display: none;
+    width: 100%;
+    height: 500px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* yes개수에 따른 다른 결과화면 */
+#yes_small {
+    display: none;
+    width: 100%;
+    height: 300px;
+}
+
+#yes_middle {
+    display: none;
+    width: 100%;
+    height: 300px;
+}
+
+#yes_big {
+    display: none;
+    width: 100%;
+    height: 300px;
+}
+
+/* yes no 애니메이션 */
+#yesImage {
+    transition: transform 0.5s;
+}
+
+#yesImage:hover {
+    transform: scale(1.1);
+}
+
+#noImage {
+    transition: transform 0.5s;
+}
+
+#noImage:hover {
+    transform: scale(1.1);
+}
+
+/** 뇌 결과 화면 이미지 **/
+#light_brain_image {
+    width: 20rem;
+    height: 20rem;
+}
+
+#normal_brain_image {
+    width: 20rem;
+    height: 20rem;
+}
+
+#skull_brain_image {
+    width: 20rem;
+    height: 20rem;
+}
+
+/** 공유 이미지(그 공유 아님) **/
+#shareImage {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+/** 링크 박스 **/
+.link_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    column-gap: 1rem;
 }
