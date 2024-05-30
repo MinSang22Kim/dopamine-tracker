@@ -1,11 +1,22 @@
-const menuBtn = document.querySelector('.select_bar_btn');
-const menu = document.querySelector('.select_bar_menu');
-const user = document.querySelector('.select_bar_user');
+document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.querySelector('.select_bar_btn');
+    const menu = document.querySelector('.select_bar_menu');
 
-menuBtn.addEventListener('click', () => {
-    menu.classList.toggle('active');
-    user.classList.toggle('active');
+    menuBtn.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
 });
+
+function slideMenuBtn() {
+    document.getElementById(".select_bar_btn").onclick = () => $(".select_bar_menu").css({
+        'display':'block',
+        '-ms-transition-duration': '2s',
+        '-webkit-transition-duration': '2s',
+        '-moz-transition-duration': '2s',
+        '-o-transition-duration': '2s',
+        'transition-duration': '2s'
+    });
+}
 
 //슬라이드
 $(document).ready(function () {
@@ -64,3 +75,43 @@ $(document).ready(function () {
         move(i);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const gradientBox = document.getElementById("gradientBox");
+
+    if (gradientBox) {
+        gradientBox.addEventListener("mouseover", function () {
+            document.body.style.background = "linear-gradient(to bottom, rgba(0, 255, 204, 0.507), rgb(65, 65, 65)";
+        });
+
+        gradientBox.addEventListener("mouseout", function () {
+            document.body.style.background = "linear-gradient(to bottom, rgba(0, 255, 204, 0.507), rgb(65, 65, 65)";
+        });
+    }
+});
+
+
+let isPlaying = true;
+
+        document.getElementById('backgroundAudio').volume = 0.1;
+
+        function toggleAudio() {
+            const audio = document.getElementById('backgroundAudio');
+            const button = document.getElementById('audioControl');
+
+            if (isPlaying) {
+                audio.pause();
+                button.textContent = '재생';
+            } else {
+                audio.play();
+                button.textContent = '중지';
+            }
+
+            isPlaying = !isPlaying;
+        }
+        // 사이드바 토글
+        $(document).ready(function(){
+            $("#sidebar-toggle").click(function(){
+                $("#sidebar").toggleClass("open");
+            });
+        });
