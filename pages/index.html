@@ -7,27 +7,28 @@
     <title>brainUp</title>
 
     <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/section.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-    <script src="https://kit.fontawesome.com/1c5675741f.js" crossorigin="anonymous"></script>
-    <script src="../js/main.js" defer></script>
     <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
-    <link href="../css/slide.css" rel="stylesheet">
+    
+    <script src="../js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/1c5675741f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
+    <!-- 상단바 -->
     <header>
         <nav class="select_bar">
             <div class="select_bar_logo">
                 <i class="fa-solid fa-brain"></i>
-                <a href="#">brainUp</a>
+                <a href="../pages/index.html">brainUp</a>
             </div>
             <ul class="select_bar_menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="page/quiz.html" class="quiz">Quiz</a></li>
+                <li><a href="../pages/index.html">Home</a></li>
+                <li><a href="../pages/qna.html" class="qna">Quiz</a></li>
                 <li><a href="#">Test2</a></li>
                 <li><a href="#">Test3</a></li>
             </ul>
@@ -40,10 +41,40 @@
             </a>
         </nav>
     </header>
+    <!-- 본문 -->
     <section>
-        <article class="main">
-            <div class="art_intro">
-                <br>
+        <article id="main">
+            <div id="mainimg">
+                <div id="view">
+                    <ul class="list">
+                        <li>
+                            <img src="../image/silde1_img.jpg">
+                        </li>
+                        <li>
+                            <img src="../image/silde2_img.jpg">
+                        </li>
+                        <li>
+                            <img src="../image/silde3_img.jpg">
+                        </li>
+                    </ul>
+                </div>
+                <ul class="btn">
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                </ul>
+            </div>
+            <div id="main-comment">
+                <div class="main-comment-box">
+                    <img src="../image/DTlogo-clear.png">
+                    <p>
+                    <h1>How are you today?</h1>
+                    <h2>Did you do your work well?</h2>
+                    </p>
+                </div>
+            </div>
+        </article>
+        <!--
                 <h2>뇌 기억력을 강화하는 방법을 배워보세요</h2>
                 <p>여기에는 일상 생활에서 쉽게 할 수 있는 기억력 강화 운동들을 소개합니다.</p>
                 <div>
@@ -57,28 +88,33 @@
                     </video>
                     <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
                 </div>
-                <div>
-                    <div id="image_container">
-                        <h1>슬라이드</h1>
-                        <div class="album">
-                            <div class="images">
-                                <div class="image">1</div>
-                                <div class="image">2</div>
-                                <div class="image">3</div>
-                                <div class="image">4</div>
-                            </div>
+                -->
+        <article id="main_2nd">
+            <div class="main-2_card">
+                <div class="card-container">
+                    <div class="card-1 card">
+                        <div class="image">
+                            <h1>메뉴1</h1>
                         </div>
-                        <button class="prev">PREV</button>
-                        <button class="next">NEXT</button>
                     </div>
-                    <script src="slide.js"></script>
+                    <div class="card-2 card">
+                        <div class="image">
+                            <h1>메뉴2</h1>
+                        </div>
+                    </div>
+                    <div class="card-3 card">
+                        <div class="image">
+                            <h1>메뉴3</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </article>
-        <article>
-            <div class="chart">
+            <div class="main2_comment">
                 no
             </div>
+
+        </article>
+        <article id="main_3rd">
             <div class="container">
                 <div class="left"></div>
                 <div class="memory-game">
@@ -91,7 +127,6 @@
                 </aside>
             </div>
         </article>
-
         <article class="audio">
             <audio controls>
                 <source src="audio/relaxing.mp3" type="audio/mp3">
