@@ -19,6 +19,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color:#f3f3f3;
+    margin:0 auto;
 }
 
 /* section */
@@ -39,6 +41,7 @@ section {
 /*main1 시작화면*/
 #mainimg {
     height: 100%;
+    margin-top: 66px;
     position: relative;
 }
 
@@ -118,6 +121,7 @@ section {
     height: 100%;
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -139,28 +143,27 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, rgba(35, 168, 142, 0.507), rgb(65, 65, 65));
+    background: white
 }
 
 /*메인2 카드 grid 컨테이너*/
 .card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
     /* 컬럼 사이의 간격 */
 }
 
 .stack {
-    width: 10em;
-    height: 10em;
-    background-color: rgb(30, 29, 29);
+    width: 11em;
+    height: 11em;
+    background-color: rgb(64, 64, 251);
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    border-radius: 20px;
 }
 
 .stack h3:hover{
@@ -177,7 +180,7 @@ section {
 /*article main3*/
 #main_3rd {
     width: 100%;
-    height:28rem;
+    height:44rem;
     position: relative;
 }
 
@@ -189,28 +192,139 @@ section {
 
 .left {
     float: left;
-    width:40%;
+    width:50%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.left_card{
+    width: 90%;
+    height: 100%;
+    margin: 2rem;
+    margin-top: 0;
+    border: 1px solid rgb(191, 190, 190);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+.left_card:first-child {
+    background-color: rgb(14, 0, 169);
+}
+.left_card:last-child {
+    background-color: rgb(3, 95, 255);
+}
+.card_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.card_icon_box{
+    width: 90%;
+    height: 150px;
+    margin: 0 auto;
+}
+.card_icon_box img{
+    width: 100%;
+    height: 100%;
+}
+
+.main3_container img{
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+.card_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:white;
+    gap: 0.5rem;
+}
+
+.card_text li{
+    list-style: none;
+    margin-left:10px;
+}
+
+.card_text img{
+    margin-top: 1rem;
+    width: 50px;
+    height: 50px;
 }
 .right {
     float: right;
-    width: 60%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner{
+    width: 100%;
+    height: 40%;
+}
+.banner img {
+    width: 100%;
     height: 100%;
 }
-.main3_container img{
-    width:100%;
-    height:100%;
+.vdo_container {
+    width: 90%;
+    height: 60%;
+    margin: 2rem;
+    margin-top: 0;
+}
+
+.content_box {
+    width: 90%;
+    height: 30%;
+    margin: 2rem;
+    margin-top: 0;
+    border: 1px solid rgb(191, 190, 190);
+    background-color: #15a2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*article main4*/
 #main_4th {
     width: 100%;
-    height: 400px;
+    height: 330px;
     background-color: blue;
 }
 
+.main4_container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
 
+.main4_container img{
+    width: 100%;
+    height: 100%;
+}
+
+.main4-shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.275);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
 
 @media screen and (max-width: 768px) {
     h2 {
@@ -220,20 +334,6 @@ section {
     .left {
         float: left;
         width: 100%;
-        height: 500px;
-    }
-
-    .memory-game {
-        float: left;
-        width: 100%;
-        height: 500px;
-        text-align: center;
-    }
-
-    aside {
-        width: 70px;
-        height: 500px;
-        position: sticky;
     }
 
     #main_2nd {
@@ -241,7 +341,7 @@ section {
     }
 
     .card-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         margin-top: 2em;
         margin-bottom: 2em;
     }
@@ -252,18 +352,31 @@ section {
 
     /*메인3*/
     #main_3rd{
-        height: 70vh;
+        height: 80vh;
     }
 
     .main3_container .left{
         width: 100%;
-        height: 60%;
+        height: 50%;
     }
 
     .main3_container .right{
         float: left;
         width: 100%;
-        height: 40%;
+        height: 50%;
+    }
+
+    .right img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .content_box {
+        height: 200px;
+    }
+
+    #main_4th {
+        height: 250px;
     }
 }
 
@@ -275,12 +388,5 @@ section {
     h2 {
         font-size: 3rem;
     }
-    #main_3rd{
-        height: 100vh;
-    }
-    .main3_container img{
-        width: 100%;
-        height: 100%;
-    }
-    
+
 }
