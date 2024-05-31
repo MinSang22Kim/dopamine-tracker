@@ -3,14 +3,25 @@
     padding: 0;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* qna 메인 */
 .qna-section {
     width: 100%;
     height: 100vh;
-    margin-top: 66px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
+}
+
+#qna_main {
+    margin-top: 100px;
 }
 
 .question {
@@ -55,6 +66,8 @@ button:hover {
 .popcorn_brain {
     width: 400px;
     height: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* 퀴즈 관련 */
@@ -146,16 +159,19 @@ button:hover {
 #light_brain_image {
     width: 20rem;
     height: 20rem;
+    margin-bottom: 20px;
 }
 
 #normal_brain_image {
     width: 20rem;
     height: 20rem;
+    margin-bottom: 20px;
 }
 
 #skull_brain_image {
     width: 20rem;
     height: 20rem;
+    margin-bottom: 20px;
 }
 
 /** 공유 이미지(그 공유 아님) **/

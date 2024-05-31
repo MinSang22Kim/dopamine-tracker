@@ -32,7 +32,6 @@ a {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(255, 255, 255);
-    padding: 0;
     border-bottom: 1px solid gray;
 }
 
@@ -81,6 +80,16 @@ a {
     right: 32px;
     font-size: 24px;
     color: rgb(0, 0, 0);
+}
+
+footer {
+    height: 100px;
+    position: relative;
+    bottom: 0;
+    background-color: rgb(8, 8, 39);
+    color: white;
+    display: flex;
+    align-items: center;
 }
 
 @media screen and (max-width: 768px) {
