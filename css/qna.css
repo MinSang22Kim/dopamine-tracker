@@ -155,7 +155,7 @@ button:hover {
     transform: scale(1.1);
 }
 
-/** 뇌 결과 화면 이미지 **/
+/* 뇌 결과 화면 이미지 */
 #light_brain_image {
     width: 20rem;
     height: 20rem;
@@ -174,14 +174,14 @@ button:hover {
     margin-bottom: 20px;
 }
 
-/** 공유 이미지(그 공유 아님) **/
+/* 공유 */
 #shareImage {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
 }
 
-/** 링크 박스 **/
+/* 링크 박스 */
 .link_box {
     display: flex;
     justify-content: center;
