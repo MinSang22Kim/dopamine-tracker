@@ -1,13 +1,3 @@
-//상단바 버튼
-document.addEventListener('DOMContentLoaded', function () {
-    const menuBtn = document.querySelector('.select_bar_btn');
-    const menu = document.querySelector('.select_bar_menu');
-
-    menuBtn.addEventListener('click', function () {
-        menu.classList.toggle('active');
-    });
-});
-
 //상단바 메뉴 슬라이드
 function slideMenuBtn() {
     document.getElementById(".select_bar_btn").onclick = () => $(".select_bar_menu").css({
@@ -115,9 +105,20 @@ function toggleAudio() {
 
     isPlaying = !isPlaying;
 }
+
 // 사이드바 토글
 $(document).ready(function () {
     $("#sidebar-toggle").click(function () {
         $("#sidebar").toggleClass("open");
     });
 });
+
+// 유튜브로 이동(임시)
+function goYoutube() {
+    window.location.href = "https://www.youtube.com/watch?v=3PEMocYpBks"
+}
+
+// 깃허브로 이동
+function goGithub() {
+    window.location.href = "https://github.com/MinSang22Kim/dopamine-tracker"
+}
