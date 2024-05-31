@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* control 메인 틀*/
+.control-section {
+  width: 100%;
+  height: 150vh;
+  background-color: white;
+  text-align: center;
+}
+
+#control_main {
+  margin-top: 15rem;
+}
+
+.choice_page {
+  margin-top: 20px;
+}
+
+/* 전체 회전 틀 */
+.satellites {
+  animation: rotate-axis 10s linear infinite;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes rotate-axis {
+  from {
+    transform: rotateZ(350deg) perspective(700px) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateZ(350deg) perspective(700px) rotateY(360deg);
+  }
+}
+
+/* 각 아이콘 이미지 */
+.satellite {
+  position: absolute;
+  width: 100px;
+  transform: rotateY(calc(var(--i) * 1deg)) translateZ(500px);
+}
+
+@keyframes rotate-axis {
+  from {
+    transform: rotateZ(350deg) perspective(700px) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateZ(350deg) perspective(700px) rotateY(360deg);
+  }
+}
+
+/* 뇌 이미지 */
+#main_brain {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main_brain:hover {
+  transform: rotateY(180deg);
+}
