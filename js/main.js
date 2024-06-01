@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //오디오
+/*
 let isPlaying = true;
 
 document.getElementById('backgroundAudio').volume = 0.1;
@@ -105,7 +106,7 @@ function toggleAudio() {
 
     isPlaying = !isPlaying;
 }
-
+*/
 // 사이드바 토글
 $(document).ready(function () {
     $("#sidebar-toggle").click(function () {
