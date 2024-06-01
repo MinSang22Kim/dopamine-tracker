@@ -212,21 +212,8 @@ button {
 }
 
 /* 미디어쿼리 부분 */
-
-@media screen and (min-width: 1100px) {
-
-  @keyframes filling {
-    0% {
-      background-position: 0 30rem;
-    }
-
-    100% {
-      background-position: 500rem 5rem;
-    }
-  }
-}
-
 @media screen and (max-width: 768px) {
+
   /* good 이미지 */
   .goodImage {
     width: 3rem;
@@ -248,10 +235,12 @@ button {
   #main_brain {
     background: url(https://image.ibb.co/fmHm66/wave.png);
     background-size: 8rem;
-    background-position: 0 10rem;
+    background-position: 0 5rem;
     background-repeat: repeat-x;
-    transition: 20 ease-in-out;
-    animation: filling 20s infinite;
+    transition: background-position 0.5s ease-in-out;
+    animation: filling 20s 2;
+    /* transition: 20 ease-in-out;
+    animation: filling 20s infinite; */
   }
 
   @keyframes filling {
