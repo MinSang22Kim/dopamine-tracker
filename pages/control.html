@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+    <script src="../js/nav.js" defer></script>
     <script src="../js/main.js" defer></script>
     <script src="../js/control.js" defer></script>
     <script src="https://kit.fontawesome.com/1c5675741f.js" crossorigin="anonymous"></script>
@@ -42,83 +43,98 @@
     </header>
     <!-- 본문 -->
     <section>
-        <div class="control-section">
-            <div id="control_main">
-            </div class="init">
-            <!-- Control 초기화면 -->
-            <h1>오늘 하루 무엇을 하셨나요?</h1>
-            <h4>이미지를 클릭해주세요!</h4>
-            <div class="all_container">
-                <div class="wrapper" id="initPage">
-                    <div class="dopamine_container">
-                        <img src="../image/happyImage/book.png" alt="reading" class="goodImage">
-                        <img src="../image/happyImage/headphone.png" alt="listening" class="goodImage">
-                        <img src="../image/happyImage/mediation.png" alt="mediation" class="goodImage">
-                        <img src="../image/happyImage/study.png" alt="study" class="goodImage">
-                        <img src="../image/happyImage/workingOut.png" alt="workingOut" class="goodImage">
-                        <img src="../image/happyImage/yoga.png" alt="yoga" class="goodImage">
-                    </div>
-                    <div class="brain_container" id="main_brain">
-                        <div class="white_area"></div>
-                        <div class="brain_area">
-                            <img src="../image/happyImage/real_brain.png" alt="brain">
+        <div id="ctrl_body_container">
+            <div class="ctrl_body_center">
+                <div class="control-section">
+                    <!-- Control 초기화면 -->
+                    <h1>오늘 하루 무엇을 하셨나요?</h1>
+                    <h4>이미지를 클릭해주세요!</h4>
+                    <div class="all_container">
+                        <div class="wrapper" id="initPage">
+                            <div class="dopamine_container">
+                                <img src="../image/happyImage/book.png" alt="reading" class="goodImage">
+                                <img src="../image/happyImage/headphone.png" alt="listening" class="goodImage">
+                                <img src="../image/happyImage/mediation.png" alt="mediation" class="goodImage">
+                                <img src="../image/happyImage/study.png" alt="study" class="goodImage">
+                                <img src="../image/happyImage/workingOut.png" alt="workingOut" class="goodImage">
+                                <img src="../image/happyImage/yoga.png" alt="yoga" class="goodImage">
+                            </div>
+                            <div class="brain_container" id="main_brain">
+                                <div class="white_area"></div>
+                                <div class="brain_area">
+                                    <img src="../image/happyImage/real_brain.png" alt="brain">
+                                </div>
+                                <div class="white_area"></div>
+                            </div>
+                            <div class="dopamine_container">
+                                <img src="../image/happyImage/beer.png" alt="beer" class="badImage">
+                                <img src="../image/happyImage/tobacco2.png" alt="tobacco" class="badImage">
+                                <img src="../image/happyImage/lol.png" alt="lol" class="badImage">
+                                <img src="../image/happyImage/nineteen.png" alt="nineteen" class="badImage">
+                                <img src="../image/happyImage/chocolate.png" alt="chocolate" class="badImage">
+                                <img src="../image/happyImage/instagram.png" alt="instagram" class="badImage">
+                            </div>
                         </div>
-                        <div class="white_area"></div>
                     </div>
-                    <div class="dopamine_container">
-                        <img src="../image/happyImage/beer.png" alt="beer" class="badImage">
-                        <img src="../image/happyImage/tobacco2.png" alt="tobacco" class="badImage">
-                        <img src="../image/happyImage/lol.png" alt="lol" class="badImage">
-                        <img src="../image/happyImage/nineteen.png" alt="nineteen" class="badImage">
-                        <img src="../image/happyImage/chocolate.png" alt="chocolate" class="badImage">
-                        <img src="../image/happyImage/instagram.png" alt="instagram" class="badImage">
+                    <div class="bottom_layout">
+                        <button type="button" onclick="result()" class="resultBtn">오늘의 도파민 지수는?</button>
+                    </div>
+                </div>
+                <!-- 좋은 결과 -->
+                <div class="good_result">
+                    <h1>오늘 하루도 도파민의 유혹을 이겨내고,<br> 의미 있는 하루를 보내셨군요!</h1>
+                    <br>
+                    <img src="../image/happyImage/good_result.jpg" alt="goodResult" class="goodResultImage" width="100%">
+                    <br><br>
+                    <button class="button" onclick="goBack()">다시 검사하기</button>
+                </div>
+                <!-- 나쁜 결과(회전) -->
+                <div class="bad_result">
+                    <h1>오늘 하루는 흔들렸지만, <br>내일은 더 나은 하루를 보낼 수 있을 거예요!</h1>
+                    
+                    <div class="satellites">
+                        <img class="satellite" id="nineteen_image" style="--i: 0; top: 100px"
+                            src="../image/happyImage/nineteen.png">
+                        <img class="satellite" id="beer_image" style="--i: 20; top: 30px"
+                            src="../image/happyImage/beer.png">
+                        <img class="satellite" id="soju1_image" style="--i: 40; top: 120px"
+                            src="../image/happyImage/soju1.png">
+                        <img class="satellite" id="tobacco2_image" style="--i: 60; top: 70px"
+                            src="../image/happyImage/tobacco2.png">
+                        <img class="satellite" id="chocolate_image" style="--i: 80; top: 10px"
+                            src="../image/happyImage/chocolate.png">
+                        <img class="satellite" id="instagram_image" style="--i: 100; top: 90px"
+                            src="../image/happyImage/instagram.png">
+                        <img class="satellite" id="maple_image" style="--i: 120; top: 40px"
+                            src="../image/happyImage/maple.png">
+                        <img class="satellite" id="good_image" style="--i: 140; top: 30px"
+                            src="../image/happyImage/good.png">
+                        <img class="satellite" id="lostark_image" style="--i: 160; top: 20px"
+                            src="../image/happyImage/lostark.png">
+                        <img class="satellite" id="fifa_image" style="--i: 180; top: 90px"
+                            src="../image/happyImage/fifa.png">
+                        <img class="satellite" id="tobacco3_image" style="--i: 200; top: 110px"
+                            src="../image/happyImage/tobacco3.png">
+                        <img class="satellite" id="porno_image" style="--i: 220; top: 20px"
+                            src="../image/happyImage/porno.png">
+                        <img class="satellite" id="lol_image" style="--i: 240; top: 70px"
+                            src="../image/happyImage/lol.png">
+                        <img class="satellite" id="youtube_image" style="--i: 260; top: 80px"
+                            src="../image/happyImage/youtube.png">
+                        <img class="satellite" id="pubg_image" style="--i: 280; top: 10px"
+                            src="../image/happyImage/pubg.png">
+                        <img class="satellite" id="tobacco_image" style="--i: 300; top: 20px"
+                            src="../image/happyImage/tobacco.png">
+                        <img class="satellite" id="tictok_image" style="--i: 320; top: 120px"
+                            src="../image/happyImage/tictok.png">
+                        <img class="satellite" id="beer2_image" style="--i: 340; top: 20px"
+                            src="../image/happyImage/beer2.png">
+                        <div class="wrapper" id="main_brain">
+                            <img src="../image/happyImage/main_brain.png" alt="brain" id="real_brain_image">
+                        </div>
                     </div>
                 </div>
             </div>
-            <button type="button" onclick="result()" class="resultBtn">오늘의 도파민 지수는?</button>
-        </div>
-        <!-- 좋은 결과 -->
-        <div class="good_result">
-            <img src="../image/happyImage/good_result.jpg" alt="goodResult" class="goodResultImage">
-            <h1>오늘 하루도 도파민의 유혹을 이겨내고 의미 있는 하루를 보내셨군요!</h1>
-            <button class="button" onclick="goBack()">다시 검사하기</button>
-        </div>
-        <!-- 나쁜 결과(회전) -->
-        <div class="bad_result">
-            <div class="satellites">
-                <img class="satellite" id="nineteen_image" style="--i: 0; top: 80px"
-                    src="../image/happyImage/nineteen.png">
-                <img class="satellite" id="beer_image" style="--i: 20; top: 30px" src="../image/happyImage/beer.png">
-                <img class="satellite" id="soju1_image" style="--i: 40; top: 120px" src="../image/happyImage/soju1.png">
-                <img class="satellite" id="tobacco2_image" style="--i: 60; top: 70px"
-                    src="../image/happyImage/tobacco2.png">
-                <img class="satellite" id="chocolate_image" style="--i: 80; top: 10px"
-                    src="../image/happyImage/chocolate.png">
-                <img class="satellite" id="instagram_image" style="--i: 100; top: 90px"
-                    src="../image/happyImage/instagram.png">
-                <img class="satellite" id="maple_image" style="--i: 120; top: 40px" src="../image/happyImage/maple.png">
-                <img class="satellite" id="good_image" style="--i: 140; top: 30px" src="../image/happyImage/good.png">
-                <img class="satellite" id="lostark_image" style="--i: 160; top: 20px"
-                    src="../image/happyImage/lostark.png">
-                <img class="satellite" id="fifa_image" style="--i: 180; top: 90px" src="../image/happyImage/fifa.png">
-                <img class="satellite" id="tobacco3_image" style="--i: 200; top: 110px"
-                    src="../image/happyImage/tobacco3.png">
-                <img class="satellite" id="porno_image" style="--i: 220; top: 20px" src="../image/happyImage/porno.png">
-                <img class="satellite" id="lol_image" style="--i: 240; top: 70px" src="../image/happyImage/lol.png">
-                <img class="satellite" id="youtube_image" style="--i: 260; top: 80px"
-                    src="../image/happyImage/youtube.png">
-                <img class="satellite" id="pubg_image" style="--i: 280; top: 10px" src="../image/happyImage/pubg.png">
-                <img class="satellite" id="tobacco_image" style="--i: 300; top: 20px"
-                    src="../image/happyImage/tobacco.png">
-                <img class="satellite" id="tictok_image" style="--i: 320; top: 120px"
-                    src="../image/happyImage/tictok.png">
-                <img class="satellite" id="beer2_image" style="--i: 340; top: 20px" src="../image/happyImage/beer2.png">
-                <div class="wrapper" id="main_brain">
-                    <img src="../image/happyImage/main_brain.png" alt="brain" id="main_brain_image">
-                </div>
-            </div>
-        </div>
-        </div>
         </div>
     </section>
     <!-- 하단 -->
