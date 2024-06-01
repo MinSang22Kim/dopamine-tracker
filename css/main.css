@@ -11,30 +11,37 @@ h2 {
     font-size: 2rem;
 }
 
+h3{
+    font-size: 1.5rem;
+}
 body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color:#f3f3f3;
+    margin:0 auto;
 }
 
 /* section */
 section {
     width: 100%;
-    height: 5000px;
+    height: 100%;
     background-color: white;
-    padding-bottom: 100px;
 }
 
+/*article main1*/
 #main {
     width: 100%;
+    height: 40vh;
     text-align: center;
-    height: 100vh;
     position: relative;
 }
 
+/*main1 시작화면*/
 #mainimg {
     height: 100%;
+    margin-top: 66px;
     position: relative;
 }
 
@@ -55,7 +62,6 @@ section {
 #view li img {
     width: 100%;
     height: 100%;
-
 }
 
 #view li:nth-child(1) {
@@ -103,7 +109,7 @@ section {
 
 .main-comment {
     width: 100%;
-    height: 100vh;
+    height: 40vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -112,83 +118,212 @@ section {
 
 .main-comment-box {
     width: 100%;
-    position: absolute;
-    top: 36%;
+    height: 100%;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-comment-box img{
+    width: 10rem;
 }
 
+/*article main2*/
 #main_2nd {
     width: 100%;
     text-align: center;
-    height: 55rem;
+    height: 20rem;    
 }
 
+/*메인2 카드 배경*/
 .main-2_card {
     width: 100%;
-    height: 35%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 255, 204, 0.507);
+    background: white
 }
 
+/*메인2 카드 grid 컨테이너*/
 .card-container {
-    width: 48rm;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
     /* 컬럼 사이의 간격 */
 }
 
-.card .stack {
-    width: 15em;
-    height: 15em;
-    background-color: rgb(42, 42, 42);
+.stack {
+    width: 11em;
+    height: 11em;
+    background-color: rgb(64, 64, 251);
     color: white;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
+.stack h3:hover{
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+    color:greenyellow;
+}
 .stack hr {
     background-color: white;
     width: 15em;
     border: 1;
 }
 
-.main2_comment {
+/*article main3*/
+#main_3rd {
     width: 100%;
-    height: 37rem;
-    overflow: hidden;
+    height:44rem;
     position: relative;
 }
 
-.main-comment2 {
+.main3_container {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+
+.left {
+    float: left;
+    width:50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left_card{
+    width: 90%;
+    height: 100%;
+    margin: 2rem;
+    margin-top: 0;
+    border: 1px solid rgb(191, 190, 190);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+.left_card:first-child {
+    background-color: rgb(14, 0, 169);
+}
+.left_card:last-child {
+    background-color: rgb(3, 95, 255);
+}
+.card_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.card_icon_box{
+    width: 90%;
+    height: 150px;
+    margin: 0 auto;
+}
+.card_icon_box img{
+    width: 100%;
+    height: 100%;
+}
+
+.main3_container img{
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+.card_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:white;
+    gap: 0.5rem;
+}
+
+.card_text li{
+    list-style: none;
+    margin-left:10px;
+}
+
+.card_text img{
+    margin-top: 1rem;
+    width: 50px;
+    height: 50px;
+}
+.right {
+    float: right;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner{
+    width: 100%;
+    height: 40%;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+.vdo_container {
+    width: 90%;
+    height: 60%;
+    margin: 2rem;
+    margin-top: 0;
+}
+
+.content_box {
+    width: 90%;
+    height: 30%;
+    margin: 2rem;
+    margin-top: 0;
+    border: 1px solid rgb(191, 190, 190);
+    background-color: #15a2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*article main4*/
+#main_4th {
+    width: 100%;
+    height: 330px;
+    background-color: blue;
+}
+
+.main4_container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main4_container img{
+    width: 100%;
+    height: 100%;
+}
+
+.main4-shadow{
     position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.379);
-}
-
-.main2_comment img {
     width: 100%;
     height: 100%;
-}
-
-#main_3rd {
-    width: 100%;
-    height: 400px;
-}
-
-.information {
-    width: 100%;
-    height: 80px;
-}
-
-#main_3rd {
-    width: 100%;
-    height: 100vh;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.275);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -199,20 +334,6 @@ section {
     .left {
         float: left;
         width: 100%;
-        height: 500px;
-    }
-
-    .memory-game {
-        float: left;
-        width: 100%;
-        height: 500px;
-        text-align: center;
-    }
-
-    aside {
-        width: 70px;
-        height: 500px;
-        position: sticky;
     }
 
     #main_2nd {
@@ -220,19 +341,42 @@ section {
     }
 
     .card-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         margin-top: 2em;
         margin-bottom: 2em;
-
-    }
-
-    .main-2_card {
-        background: linear-gradient(to bottom, rgba(0, 255, 204, 0.507), rgb(65, 65, 65));
-        /* 초기 그라데이션 */
     }
 
     .main2_comment {
         height: 30rem;
+    }
+
+    /*메인3*/
+    #main_3rd{
+        height: 80vh;
+    }
+
+    .main3_container .left{
+        width: 100%;
+        height: 50%;
+    }
+
+    .main3_container .right{
+        float: left;
+        width: 100%;
+        height: 50%;
+    }
+
+    .right img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .content_box {
+        height: 200px;
+    }
+
+    #main_4th {
+        height: 250px;
     }
 }
 
@@ -244,4 +388,5 @@ section {
     h2 {
         font-size: 3rem;
     }
+
 }

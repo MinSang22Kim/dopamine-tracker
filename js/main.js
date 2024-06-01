@@ -1,15 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menuBtn = document.querySelector('.select_bar_btn');
-    const menu = document.querySelector('.select_bar_menu');
-
-    menuBtn.addEventListener('click', function() {
-        menu.classList.toggle('active');
-    });
-});
-
+//상단바 메뉴 슬라이드
 function slideMenuBtn() {
     document.getElementById(".select_bar_btn").onclick = () => $(".select_bar_menu").css({
-        'display':'block',
+        'display': 'flex',
+        'text-align': 'center',
+        'align-items': 'center',
         '-ms-transition-duration': '2s',
         '-webkit-transition-duration': '2s',
         '-moz-transition-duration': '2s',
@@ -18,7 +12,7 @@ function slideMenuBtn() {
     });
 }
 
-//슬라이드
+//메인1 사진 슬라이드
 $(document).ready(function () {
     var current = 0;
     var setIntervalId;
@@ -76,6 +70,7 @@ $(document).ready(function () {
     });
 });
 
+//메인2 grid 카드
 document.addEventListener("DOMContentLoaded", function () {
     const gradientBox = document.getElementById("gradientBox");
 
@@ -91,27 +86,39 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+//오디오
 let isPlaying = true;
 
-        document.getElementById('backgroundAudio').volume = 0.1;
+document.getElementById('backgroundAudio').volume = 0.1;
 
-        function toggleAudio() {
-            const audio = document.getElementById('backgroundAudio');
-            const button = document.getElementById('audioControl');
+function toggleAudio() {
+    const audio = document.getElementById('backgroundAudio');
+    const button = document.getElementById('audioControl');
 
-            if (isPlaying) {
-                audio.pause();
-                button.textContent = '재생';
-            } else {
-                audio.play();
-                button.textContent = '중지';
-            }
+    if (isPlaying) {
+        audio.pause();
+        button.textContent = '재생';
+    } else {
+        audio.play();
+        button.textContent = '중지';
+    }
 
-            isPlaying = !isPlaying;
-        }
-        // 사이드바 토글
-        $(document).ready(function(){
-            $("#sidebar-toggle").click(function(){
-                $("#sidebar").toggleClass("open");
-            });
-        });
+    isPlaying = !isPlaying;
+}
+
+// 사이드바 토글
+$(document).ready(function () {
+    $("#sidebar-toggle").click(function () {
+        $("#sidebar").toggleClass("open");
+    });
+});
+
+// 유튜브로 이동(임시)
+function goYoutube() {
+    window.location.href = "https://www.youtube.com/watch?v=3PEMocYpBks"
+}
+
+// 깃허브로 이동
+function goGithub() {
+    window.location.href = "https://github.com/MinSang22Kim/dopamine-tracker"
+}
