@@ -5,25 +5,175 @@
 
 body {
   font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
-/* control 메인 틀*/
+section {
+  width: 100%;
+  background-color: white;
+  padding-bottom: 100px;
+}
+
+/* container들 */
+.all_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dopamine_conatiner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.brain_conatiner {}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+#initPage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .control-section {
   width: 100%;
-  height: 150vh;
+  height: 100vh;
   background-color: white;
   text-align: center;
 }
 
 #control_main {
   margin-top: 15rem;
+  text-align: center;
 }
 
-.choice_page {
+#initPage {
   margin-top: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+/* 버튼 */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 2rem 4rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* 뇌 이미지 */
+#main_brain {
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 뇌 색 채우기 보조*/
+#main_brain img {
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.white_area {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.brain_area {
+  width: 100%;
+  height: 100%;
+}
+
+/* 뇌 색 채우기 */
+#main_brain {
+  background: url(https://image.ibb.co/fmHm66/wave.png);
+  background-position: 0 10rem;
+  background-repeat: repeat-x;
+  transition: 20 ease-in-out;
+  animation: filling 10s infinite;
+}
+
+@keyframes filling {
+  0% {
+    background-position: 0 50rem;
+  }
+
+  100% {
+    background-position: 500rem 15rem;
+  }
+}
+
+/* good 이미지 */
+.goodImage {
+  width: 10rem;
+  height: 10rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.goodImage:hover {
+  transform: scale(1.1);
+}
+
+/* bad 이미지 */
+.badImage {
+  width: 10rem;
+  height: 10rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.badImage {
+  transition: transform 0.5s;
+}
+
+.badImage:hover {
+  transform: scale(1.1);
+}
+
+.resultBtn {
+  margin-top: 10rem;
+  column-gap: 1rem;
+}
+
+.result_conatiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 결과창 */
+.good_result {
+  display: none;
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.bad_result {
+  display: none;
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 /* 전체 회전 틀 */
@@ -61,15 +211,56 @@ body {
   }
 }
 
-/* 뇌 이미지 */
-#main_brain {
-  width: 10rem;
-  height: 10rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* 미디어쿼리 부분 */
+
+@media screen and (min-width: 1100px) {
+
+  @keyframes filling {
+    0% {
+      background-position: 0 30rem;
+    }
+
+    100% {
+      background-position: 500rem 5rem;
+    }
+  }
 }
 
-#main_brain:hover {
-  transform: rotateY(180deg);
+@media screen and (max-width: 768px) {
+  /* good 이미지 */
+  .goodImage {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.1rem;
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+
+  /* bad 이미지 */
+  .badImage {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.1rem;
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+
+  #main_brain {
+    background: url(https://image.ibb.co/fmHm66/wave.png);
+    background-size: 8rem;
+    background-position: 0 10rem;
+    background-repeat: repeat-x;
+    transition: 20 ease-in-out;
+    animation: filling 20s infinite;
+  }
+
+  @keyframes filling {
+    0% {
+      background-position: 0 9rem;
+    }
+
+    100% {
+      background-position: 500rem 0rem;
+    }
+  }
 }
