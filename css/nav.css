@@ -113,14 +113,15 @@ a {
     .select_bar_user {
         display: block;
         position: absolute;
-        right: 10px;
+        right: 20px;
         top: 25%;
+        display: flex;
     }
 
     .select_bar_btn {
         display: block;
         position: absolute;
-        right: 60px;
+        right: 110px;
         top: 30%;
     }
 
