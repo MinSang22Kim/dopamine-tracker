@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>brainUp quiz page</title>
     <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/section.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/qna.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,54 +40,79 @@
         </nav>
     </header>
     <!-- QNA 섹션 -->
-    <section class="qna-section">
-        <div id="qna_main">
-            <!-- qna 초기화면 -->
-            <h1>도파민 중독 테스트</h1>
-            <div class="wrapper" id="initPage">
-                <img src="../image/popcorn_brain.png" alt="popcorn_brain" class="popcorn_brain"><br>
-                <h2>나도 과연 도파민 중독일까?</h2><br>
-                <button type="button" onclick="start()">시작하기</button>
-            </div>
-            <!-- QNA 자가진단 -->
-            <div class="wrapper" id="quizes">
-                <div class="quiz_container">
-                    <div class="answer_container">
-                        <div class="answer_image">
-                            <img src="../image/yes.png" alt="yes" id="yesImage">
+    <section>
+        <div class="qna-section">
+            <div id="qna_main">
+                <div class="qna_body">
+                    <!-- qna 초기화면 -->
+                    <h1>도파민 중독 테스트</h1>
+                    <div class="wrapper" id="initPage">
+                        <img src="../image/popcorn_brain.png" alt="popcorn_brain" class="popcorn_brain"><br>
+                        <h2>나도 과연 도파민 중독일까?</h2><br>
+                        <button type="button" onclick="start()">시작하기</button>
+                    </div>
+                    <!-- QNA 자가진단 -->
+                    <div class="wrapper" id="quizes">
+                        <div class="quiz_container">
+                            <div class="answer_container">
+                                <div class="answer_image">
+                                    <img src="../image/yes.png" alt="yes" id="yesImage">
+                                </div>
+                                <div class="answer_image">
+                                    <img src="../image/no.png" alt="no" id="noImage">
+                                </div>
+                            </div>
                         </div>
-                        <div class="answer_image">
-                            <img src="../image/no.png" alt="no" id="noImage">
+                        <div class="status_bar"></div>
+                    </div>
+                    <!-- QNA 결과화면 -->
+                    <div class="wrapper" id="dopamine_result">
+                        <h1>도파민 중독 자가진단 결과</h1><br>
+                        <div class="wrapper" id="yes_small">
+                            <img src="../image/light_brain.png" alt="light_brain" id="light_brain_image">
+                            <h4>나의 뇌는 쌩쌩해~~</h4>
+                        </div>
+                        <div class="wrapper" id="yes_middle">
+                            <img src="../image/normal_brain.png" alt="normal_brain" id="normal_brain_image">
+                            <h4>조금 과한 것 같아요. 주의하세요!!<br>도파민 디톡스로 예방주사 어떠신가요?</h4>
+                        </div>
+                        <div class="wrapper" id="yes_big">
+                            <img src="../image/skull_brain.png" alt="skull_brain" id="skull_brain_image">
+                            <h4>도파민에 푹 빠진 당신, 뇌가 녹지는 않으셨나요..?<br>도파민 디톡스 어떠신가요?</h4>
+                        </div>
+                        <div class="link_box">
+                            <img src="../image/share.png" alt="share" id="shareImage" onclick="copyLink()">
+                            <button type="detoxBtn" onclick="goDetox()">잠깐! 뇌를 위해 쉬어볼까요?</button>
                         </div>
                     </div>
-                </div>
-                <div class="status_bar"></div>
-            </div>
-            <!-- QNA 결과화면 -->
-            <div class="wrapper" id="dopamine_result">
-                <h1>도파민 중독 자가진단 결과</h1><br>
-                <div class="wrapper" id="yes_small">
-                    <img src="../image/light_brain.jpeg" alt="light_brain" id="light_brain_image">
-                    <h4>나의 뇌는 쌩쌩해~~</h4>
-                </div>
-                <div class="wrapper" id="yes_middle">
-                    <img src="../image/normal_brain.png" alt="normal_brain" id="normal_brain_image">
-                    <h4>조금 과한 것 같아요. 주의하세요!!<br>도파민 디톡스로 예방주사 어떠신가요?</h4>
-                </div>
-                <div class="wrapper" id="yes_big">
-                    <img src="../image/skull_brain.jpeg" alt="skull_brain" id="skull_brain_image">
-                    <h4>도파민에 푹 빠진 당신, 뇌가 녹지는 않으셨나요..?<br>도파민 디톡스 어떠신가요?</h4>
-                </div>
-                <div class="link_box">
-                    <img src="../image/share.png" alt="share" id="shareImage" onclick="copyLink()">
-                    <button type="detoxBtn" onclick="goDetox()">잠깐! 뇌를 위해 쉬어볼까요?</button>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2024 BrainUp. 모든 권리 보유.</p>
+        <div class="footer_left">
+            <ol>
+                <li class="name">Dopamine Tracker</li>
+                <li class="info">경기대학교 컴퓨터공학부 웹 프로그래밍</li>
+                <li class="info">Developed By 김민상, 이윤종</li>
+            </ol>
+        </div>
+        <div class="footer_center">
+            <ol>
+                <li class="info"><img src="../image/cs_logo.png" width="170px" height="40px"></li>
+                <li class="info">오시는 길 : 서울특별시 서대문구 경기대로9길 24
+                </li>
+            </ol>
+        </div>
+        <div class="footer_right">
+            <ol>
+                <li><img src="../image/youtube.png" id="youtube_icon" onclick="goYoutube()" width="40px" height="40px">
+                </li>
+                <li><img src="../image/github-mark-white.png" id="github_icon" onclick="goGithub()" width="40px"
+                        height="40px"></li>
+            </ol>
+        </div>
     </footer>
 </body>
 
