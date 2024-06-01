@@ -46,7 +46,7 @@ function updateStatusBar(index) {
 
 // 결과 화면
 function showResults(yesCount) {
-  $("#quizes, #qna_main>h1").hide();
+  $("#quizes, .qna_body>h1").hide();
   $("#dopamine_result").show();
   getResultMessage(yesCount);
   if (yesCount >= 7) {

@@ -11,16 +11,17 @@ h2 {
     font-size: 2rem;
 }
 
-h3{
+h3 {
     font-size: 1.5rem;
 }
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color:#f3f3f3;
-    margin:0 auto;
+    background-color: #f3f3f3;
+    margin: 0 auto;
 }
 
 /* section */
@@ -125,7 +126,8 @@ section {
     justify-content: center;
     align-items: center;
 }
-.main-comment-box img{
+
+.main-comment-box img {
     width: 10rem;
 }
 
@@ -133,7 +135,23 @@ section {
 #main_2nd {
     width: 100%;
     text-align: center;
-    height: 20rem;    
+    height: 20rem;
+}
+
+/*본문 중앙정렬*/
+#body_container{
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.body_center{
+    width: 100%; /* 적절한 너비를 설정하세요 */
+    max-width: 1300px;
+    margin: 0 auto; /* 수평 중앙 정렬 */
+    
 }
 
 /*메인2 카드 배경*/
@@ -166,100 +184,34 @@ section {
     padding: 20px;
 }
 
-.stack h3:hover{
+.stack h3:hover {
     transform: scale(1.1);
     transition-duration: 0.1s;
-    color:greenyellow;
+    color: greenyellow;
 }
+
 .stack hr {
     background-color: white;
     width: 15em;
     border: 1;
 }
 
-/*article main3*/
+/*메인3*/
 #main_3rd {
     width: 100%;
-    height:44rem;
-    position: relative;
+    height: 60vh;
 }
 
 .main3_container {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: relative;
+
 }
 
 .left {
     float: left;
-    width:50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.left_card{
-    width: 90%;
-    height: 100%;
-    margin: 2rem;
-    margin-top: 0;
-    border: 1px solid rgb(191, 190, 190);
-    display: grid;
-    grid-template-columns: 200px 1fr;
-}
-.left_card:first-child {
-    background-color: rgb(14, 0, 169);
-}
-.left_card:last-child {
-    background-color: rgb(3, 95, 255);
-}
-.card_icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-}
-.card_icon_box{
-    width: 90%;
-    height: 150px;
-    margin: 0 auto;
-}
-.card_icon_box img{
-    width: 100%;
-    height: 100%;
-}
-
-.main3_container img{
-    width: 100%;
-    height: 100%;
-}
-
-iframe {
-    width: 100%;
-    height: 100%;
-}
-.card_text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color:white;
-    gap: 0.5rem;
-}
-
-.card_text li{
-    list-style: none;
-    margin-left:10px;
-}
-
-.card_text img{
-    margin-top: 1rem;
-    width: 50px;
-    height: 50px;
-}
-.right {
-    float: right;
     width: 50%;
     height: 100%;
     display: flex;
@@ -268,14 +220,73 @@ iframe {
     align-items: center;
 }
 
-.banner{
-    width: 100%;
-    height: 40%;
+.left_card {
+    width: 90%;
+    margin: 2rem;
+    margin-top: 0;
+    border: 1px solid rgb(191, 190, 190);
+    display: grid;
+    grid-template-columns: 200px 1fr;
 }
-.banner img {
+
+.left_card:first-child {
+    background-color: rgb(55, 37, 255);
+}
+.left_card:nth-child(2){
+    background-color: rgb(3, 95, 255);
+}
+.left_card:last-child {
+    background-color: rgb(49, 156, 255);
+}
+
+.card_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.card_icon_box {
+    width: 90%;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.card_icon_box img {
     width: 100%;
     height: 100%;
 }
+
+.card_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.card_text img {
+    margin-top: 1rem;
+    width: 50px;
+    height: 50px;
+}
+
+.card_text li {
+    margin-left: 10px;
+}
+
+.right {
+    margin-top: 80px;
+    float: left;
+    width: 600px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .vdo_container {
     width: 90%;
     height: 60%;
@@ -283,16 +294,19 @@ iframe {
     margin-top: 0;
 }
 
-.content_box {
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.banner {
     width: 90%;
-    height: 30%;
-    margin: 2rem;
-    margin-top: 0;
-    border: 1px solid rgb(191, 190, 190);
-    background-color: #15a2ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 40%;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
 }
 
 /*article main4*/
@@ -308,22 +322,52 @@ iframe {
     position: relative;
 }
 
-.main4_container img{
+.main4_container img {
     width: 100%;
     height: 100%;
 }
 
-.main4-shadow{
+.main4-shadow {
     position: absolute;
     width: 100%;
     height: 100%;
-    top:0;
+    top: 0;
     background-color: rgba(0, 0, 0, 0.275);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
+}
+
+@media screen and (max-width: 1200px){
+    #main_2nd{
+        height: 50vh;
+    }
+    .card-container {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    #main_3rd{
+        height: 100vh;
+    }
+    .main3_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+    .main3_container .left {
+        width: 80%;
+    }
+
+    .main3_container .right {
+        width: 80%;
+        height: 100%;
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -340,33 +384,26 @@ iframe {
         height: auto;
     }
 
-    .card-container {
-        grid-template-columns: 1fr 1fr;
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
 
     .main2_comment {
         height: 30rem;
     }
 
     /*메인3*/
-    #main_3rd{
-        height: 80vh;
+    #main_3rd {
+        height: 100vh;
     }
 
-    .main3_container .left{
+    .main3_container .left {
         width: 100%;
-        height: 50%;
     }
 
-    .main3_container .right{
-        float: left;
+    .main3_container .right {
         width: 100%;
-        height: 50%;
+        height: 62%;
     }
 
-    .right img{
+    .right img {
         width: 100%;
         height: 100%;
     }
@@ -378,15 +415,4 @@ iframe {
     #main_4th {
         height: 250px;
     }
-}
-
-@media screen and (min-width: 1800px) {
-    .main2_comment {
-        height: 100vh;
-    }
-
-    h2 {
-        font-size: 3rem;
-    }
-
 }
