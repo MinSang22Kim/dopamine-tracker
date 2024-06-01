@@ -81,5 +81,5 @@ $('#shareImage').click(function () {
 
 // 도파민-디톡스 하러가기
 function goDetox() {
-  window.location.href = "../pages/detox.html";
+  window.location.href = "../pages/control.html";
 }
