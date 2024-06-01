@@ -279,9 +279,28 @@ button {
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 1400px) {
   .dopamine_container {
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: 1fr;
+  }
+
+  #main_brain {
+    background: url("../image/happyImage/wave.png");
+    background-size: 33rem;
+    background-position: 0 5rem;
+    background-repeat: repeat-x;
+    transition: 20 ease-in-out;
+    animation: filling 10s infinite;
+  }
+
+  @keyframes filling {
+    0% {
+      background-position: 0 40rem;
+    }
+
+    100% {
+      background-position: 500rem 8rem;
+    }
   }
 }
