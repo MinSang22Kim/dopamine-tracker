@@ -85,35 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
-//오디오
-/*
-let isPlaying = true;
-
-document.getElementById('backgroundAudio').volume = 0.1;
-
-function toggleAudio() {
-    const audio = document.getElementById('backgroundAudio');
-    const button = document.getElementById('audioControl');
-
-    if (isPlaying) {
-        audio.pause();
-        button.textContent = '재생';
-    } else {
-        audio.play();
-        button.textContent = '중지';
-    }
-
-    isPlaying = !isPlaying;
-}
-*/
-// 사이드바 토글
-$(document).ready(function () {
-    $("#sidebar-toggle").click(function () {
-        $("#sidebar").toggleClass("open");
-    });
-});
-
 // 유튜브로 이동(임시)
 function goYoutube() {
     window.location.href = "https://www.youtube.com/watch?v=3PEMocYpBks"
